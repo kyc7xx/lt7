@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions Task</title>
+    <style>
+        body {
+            height: 3000px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            height: 180px;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .relative-container {
+            position: relative;
+            display: inline-block;
+            margin: 20px auto;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+        }
+        .relative-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .white-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 27%;
+            background: rgba(255, 255, 255, 0.75);
+            pointer-events: none;
+        }
+        .discount-tag, .add-to-cart {
+            width: 70px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .discount-tag {
+            position: absolute;
+            top: 7px;
+            right: 0px;
+            background-color: black;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            font-size: 11px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="close-button">X</div>
+    <div class="fixed-box"></div>
+    <div class="relative-container">
+        <img src="C:\Users\calie\Downloads\shirt.jpg" alt="Shirt">
+        <div class="white-cut"></div>
+        <div class="discount-tag">20% OFF</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</body>
+</html>
